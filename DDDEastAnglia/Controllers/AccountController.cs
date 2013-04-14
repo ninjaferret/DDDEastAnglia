@@ -71,16 +71,14 @@ namespace DDDEastAnglia.Controllers
                 // Attempt to register the user
                 try
                 {
-                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
+                    WebSecurity.CreateUserAndAccount(model.UserName, model.Password,
+                        new
+                        {
+                            // ensure the name and email address are set.
+                            Name = model.FullName,
+                            EmailAddress = model.EmailAddress
+                        });
                     WebSecurity.Login(model.UserName, model.Password);
-
-                    // ensure the name and email address are set
-                    DDDEAContext context = new DDDEAContext();
-                    var profile = context.UserProfiles.First(p => p.UserName == model.UserName);
-                    profile.Name = model.FullName;
-                    profile.EmailAddress = model.EmailAddress;
-                    context.Entry(profile).State = EntityState.Modified;
-                    context.SaveChanges();
 
                     return View("Registered", model);
                 }
