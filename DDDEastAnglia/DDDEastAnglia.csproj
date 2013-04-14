@@ -258,6 +258,10 @@
     <Compile Include="DataAccess\EntityFramework\Migrations\201304132127266_RemoveIsVoteColumn.Designer.cs">
       <DependentUpon>201304132127266_RemoveIsVoteColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\EntityFramework\Migrations\201304141649295_UserProfileNewSpeaker.cs" />
+    <Compile Include="DataAccess\EntityFramework\Migrations\201304141649295_UserProfileNewSpeaker.Designer.cs">
+      <DependentUpon>201304141649295_UserProfileNewSpeaker.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ExternalLogin.cs" />
     <Compile Include="Models\GrokTalk.cs" />
     <Compile Include="Models\LocalPasswordModel.cs" />
@@ -536,6 +540,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DataAccess\EntityFramework\Migrations\201304132127266_RemoveIsVoteColumn.resx">
       <DependentUpon>201304132127266_RemoveIsVoteColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataAccess\EntityFramework\Migrations\201304141649295_UserProfileNewSpeaker.resx">
+      <DependentUpon>201304141649295_UserProfileNewSpeaker.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
